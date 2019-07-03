@@ -26,5 +26,14 @@ namespace AjaxDemo.Controllers
 
             return View();
         }
+
+
+        //Loader Ajax Action Method
+
+        public JsonResult CallingAjaxFunction()
+        {
+            System.Threading.Thread.Sleep(7000);
+            return Json(true, JsonRequestBehavior.AllowGet);
+        }
     }
 }
